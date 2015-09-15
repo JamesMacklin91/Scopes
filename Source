@@ -1,0 +1,37 @@
+//scoping
+//demonstrates scopes
+
+#include<iostream>
+
+using namespace std;
+
+void func();
+
+int main()
+{
+	int var = 5;//local variable in main()
+	cout << "in main var is " << var << "\n\n";
+
+	func();
+
+	cout << "back in main var is " << var << "\n\n";
+
+	{
+		cout << "In main in a new scope var is " << var << "\n\n";
+
+		cout << "Creating new var in new scope\n";
+		int var = 10;//variable in new scope, hide other variable named var
+		cout << "in main in a new scope var is " << var << "\n\n";
+	}
+
+	cout << "at the end of main var created in new scope no longer exists\n";
+	cout << "which means var returns to " << var << "\n\n";
+
+	return 0;
+}
+
+void func()
+{
+	int var = -5;//local variable in func()
+	cout << "in func var is " << var << "\n\n";
+}
