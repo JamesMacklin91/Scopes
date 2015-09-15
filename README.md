@@ -1,0 +1,2 @@
+# Scopes
+Demonstrates scopes
